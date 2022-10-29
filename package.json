@@ -7,9 +7,11 @@
     "build": "firemyna build"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^2.1.1",
     "astro": "^1.6.0",
     "firebase-admin": "^11.2.0",
-    "firebase-functions": "^4.0.1"
+    "firebase-functions": "^4.0.1",
+    "tailwindcss": "^3.2.1"
   },
   "devDependencies": {
     "firebase-tools": "^11.15.0",
