@@ -1,0 +1,84 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:tb="using:H.NotifyIcon"
+    >
+    <XamlUICommand
+        x:Key="TogglePlayCommand"
+        Label="Play"
+        Description="Play"
+        >
+        <XamlUICommand.IconSource>
+            <PathIconSource Data="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+        </XamlUICommand.IconSource>
+    </XamlUICommand>
+    
+    <XamlUICommand
+        x:Key="RainCommand"
+        Label="Rain"
+        Description="Rain"
+        >
+    </XamlUICommand>
+    
+    <XamlUICommand
+        x:Key="OceanCommand"
+        Label="Ocean"
+        Description="Ocean"
+        >
+    </XamlUICommand>
+
+    <XamlUICommand
+        x:Key="ForestCommand"
+        Label="Forest"
+        Description="Forest"
+        >
+    </XamlUICommand>
+
+    <XamlUICommand
+        x:Key="AutoStartCommand"
+        Label="Start with Windows"
+        Description="Start with Windows"
+        >
+    </XamlUICommand>
+
+    <XamlUICommand
+        x:Key="LaunchWindowCommand"
+        Label="Show launch window"
+        Description="Show launch window"
+        >
+    </XamlUICommand>
+
+    <XamlUICommand
+        x:Key="ExitApplicationCommand"
+        Label="Exit"
+        Description="Exit"
+        >
+    </XamlUICommand>
+
+    <tb:TaskbarIcon
+        x:Key="TrayIcon"
+        Visibility="Visible"
+        ToolTipText="ToolTip"
+        ContextMenuMode="SecondWindow"
+        LeftClickCommand="{StaticResource TogglePlayCommand}"
+        NoLeftClickDelay="True"
+        IconSource="/Assets/paused.ico"
+        >
+        <tb:TaskbarIcon.ContextFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem Command="{StaticResource TogglePlayCommand}" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Command="{StaticResource RainCommand}" />
+                <MenuFlyoutItem Command="{StaticResource OceanCommand}" />
+                <MenuFlyoutItem Command="{StaticResource ForestCommand}" />
+                <MenuFlyoutSeparator />
+                <!--<MenuFlyoutSubItem Text="Options">-->
+                    <MenuFlyoutItem Command="{StaticResource AutoStartCommand}" />
+                    <MenuFlyoutItem Command="{StaticResource LaunchWindowCommand}" />
+                <!--</MenuFlyoutSubItem> -->
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Command="{StaticResource ExitApplicationCommand}" />
+            </MenuFlyout>
+        </tb:TaskbarIcon.ContextFlyout>
+    </tb:TaskbarIcon>
+</ResourceDictionary>
