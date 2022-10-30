@@ -92,10 +92,6 @@ namespace KindNoise
 
             LoadSound();
 
-            LoopStream loop = new LoopStream(oceanSound);
-            player = new WaveOut();
-            player.Init(loop);
-
             InitializeTrayIcon();
 
             await UpdateStartupState();
