@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Logotype from "../components/Logotype.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Feedback on Kind Noise">
@@ -10,13 +11,19 @@ import Logotype from "../components/Logotype.astro";
         <div class="flex flex-col space-y-6">
           <Logotype />
 
-          <p class="text-xl">
-            👋 Hey! My name is Sasha, I'm the Kind Noise author. If you have an
-            idea, a bug report or just want to chat, <a
-              href="https://twitter.com/kossnocorp"
-              class="underline text-blue-300">ping me at Twitter</a
-            >.
-          </p>
+          <div class="prose prose-lg prose-invert">
+            <h1>Do you have feedback?</h1>
+
+            <p>
+              👋 Hey! My name is Sasha, I'm the Kind Noise author. If you have
+              an idea, a bug report or just want to chat, <a
+                href="https://twitter.com/kossnocorp"
+                class="underline text-blue-300">ping me at Twitter</a
+              >.
+            </p>
+          </div>
+
+          <Footer />
         </div>
       </main>
     </div>
