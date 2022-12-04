@@ -738,7 +738,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5L-Gh-Qt9">
-                        <rect key="frame" x="18" y="93.5" width="205" height="18"/>
+                        <rect key="frame" x="18" y="94" width="205" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Show this window at launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="AdP-EH-T92">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -804,7 +804,7 @@
         </menu>
     </objects>
     <resources>
-        <image name="Logo" width="256" height="224"/>
+        <image name="Logo" width="512" height="448"/>
         <image name="checkmark" catalog="system" width="14" height="13"/>
         <image name="pause.fill" catalog="system" width="11" height="13"/>
         <image name="play.fill" catalog="system" width="12" height="13"/>

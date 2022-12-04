@@ -150,11 +150,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let event = NSApp.currentEvent!
 
         if event.type == NSEvent.EventType.leftMouseUp {
+            togglePlay()
+        } else {
             statusItem.menu = menu
             statusItem.button?.performClick(nil)
             statusItem.menu = nil
-        } else {
-            togglePlay()
         }
 
     }
