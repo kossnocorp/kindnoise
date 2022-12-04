@@ -10,6 +10,10 @@
 		8A26D7A32916047700A21FC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26D7A22916047700A21FC7 /* AppDelegate.swift */; };
 		8A26D7A52916047800A21FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A26D7A42916047800A21FC7 /* Assets.xcassets */; };
 		8A26D7A82916047800A21FC7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26D7A62916047800A21FC7 /* MainMenu.xib */; };
+		8A26D7B229160E8E00A21FC7 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A26D7B129160E8E00A21FC7 /* rain.mp3 */; };
+		8A26D7B62916146A00A21FC7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 8A26D7B52916146A00A21FC7 /* LaunchAtLogin */; };
+		8A26D7B929163E4600A21FC7 /* ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A26D7B729163E4600A21FC7 /* ocean.mp3 */; };
+		8A26D7BA29163E4600A21FC7 /* forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A26D7B829163E4600A21FC7 /* forest.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		8A26D7A42916047800A21FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A26D7A72916047800A21FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8A26D7A92916047800A21FC7 /* KindNoise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KindNoise.entitlements; sourceTree = "<group>"; };
+		8A26D7B129160E8E00A21FC7 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
+		8A26D7B729163E4600A21FC7 /* ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ocean.mp3; sourceTree = "<group>"; };
+		8A26D7B829163E4600A21FC7 /* forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forest.mp3; sourceTree = "<group>"; };
+		8A26D7BE2918AD0E00A21FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A26D7B62916146A00A21FC7 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,10 +59,14 @@
 		8A26D7A12916047700A21FC7 /* KindNoise */ = {
 			isa = PBXGroup;
 			children = (
+				8A26D7BE2918AD0E00A21FC7 /* Info.plist */,
 				8A26D7A22916047700A21FC7 /* AppDelegate.swift */,
 				8A26D7A42916047800A21FC7 /* Assets.xcassets */,
 				8A26D7A62916047800A21FC7 /* MainMenu.xib */,
 				8A26D7A92916047800A21FC7 /* KindNoise.entitlements */,
+				8A26D7B129160E8E00A21FC7 /* rain.mp3 */,
+				8A26D7B829163E4600A21FC7 /* forest.mp3 */,
+				8A26D7B729163E4600A21FC7 /* ocean.mp3 */,
 			);
 			path = KindNoise;
 			sourceTree = "<group>";
@@ -68,12 +81,16 @@
 				8A26D79B2916047700A21FC7 /* Sources */,
 				8A26D79C2916047700A21FC7 /* Frameworks */,
 				8A26D79D2916047700A21FC7 /* Resources */,
+				8A26D7BD2918A6FB00A21FC7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = KindNoise;
+			packageProductDependencies = (
+				8A26D7B52916146A00A21FC7 /* LaunchAtLogin */,
+			);
 			productName = KindNoise;
 			productReference = 8A26D79F2916047700A21FC7 /* KindNoise.app */;
 			productType = "com.apple.product-type.application";
@@ -102,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 8A26D7962916047700A21FC7;
+			packageReferences = (
+				8A26D7B42916146A00A21FC7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = 8A26D7A02916047700A21FC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -116,12 +136,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A26D7B229160E8E00A21FC7 /* rain.mp3 in Resources */,
+				8A26D7B929163E4600A21FC7 /* ocean.mp3 in Resources */,
 				8A26D7A52916047800A21FC7 /* Assets.xcassets in Resources */,
+				8A26D7BA29163E4600A21FC7 /* forest.mp3 in Resources */,
 				8A26D7A82916047800A21FC7 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A26D7BD2918A6FB00A21FC7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A26D79B2916047700A21FC7 /* Sources */ = {
@@ -270,7 +314,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KindNoise/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -279,7 +326,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nocorp.KindNoise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nocorp.kindnoise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,7 +342,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KindNoise/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -304,7 +354,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nocorp.KindNoise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nocorp.kindnoise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A26D7B42916146A00A21FC7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A26D7B52916146A00A21FC7 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A26D7B42916146A00A21FC7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A26D7972916047700A21FC7 /* Project object */;
 }

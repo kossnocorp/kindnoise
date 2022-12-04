@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17150" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17150"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,10 +12,20 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KindNoise" customModuleProvider="target">
             <connections>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="feedbackLabel" destination="rbt-U9-MhM" id="gfd-d0-oyj"/>
+                <outlet property="feedbackLabelCell" destination="9Va-BC-Gjx" id="iuL-F6-3f0"/>
+                <outlet property="forestMenuItem" destination="tI4-yP-cue" id="jot-fj-dzd"/>
+                <outlet property="launchAtLoginMenuItem" destination="ROs-rJ-37D" id="ncd-V4-jVW"/>
+                <outlet property="launchWindow" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="menu" destination="Ni4-Bb-9Zz" id="JXe-gx-Gcq"/>
+                <outlet property="oceanMenuItem" destination="7f6-oe-Ih4" id="i81-WS-EI5"/>
+                <outlet property="quitMenuItem" destination="92R-Y2-SXf" id="iNk-oX-hIg"/>
+                <outlet property="rainMenuItem" destination="WvT-tY-Uyn" id="vIO-A7-Uog"/>
+                <outlet property="showAtLaunchCheckbox" destination="a5L-Gh-Qt9" id="BZc-KO-Grh"/>
+                <outlet property="togglePlayMenuItem" destination="Oqp-6k-klJ" id="cUF-s3-zTQ"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -680,16 +691,123 @@
             </items>
             <point key="canvasLocation" x="200" y="121"/>
         </menu>
-        <window title="KindNoise" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="KindNoise" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <rect key="contentRect" x="335" y="390" width="790" height="350"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="790" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsd-KM-sqZ">
+                        <rect key="frame" x="440" y="0.0" width="350" height="350"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Screenshot" id="jGy-qB-XrH"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tcn-zX-xmR">
+                        <rect key="frame" x="20" y="236" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Logo" id="j86-If-Uzr"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAa-HE-2Je">
+                        <rect key="frame" x="75" y="237" width="331" height="38"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" title="Welcome to Kind Noise!" id="gh7-HH-Fmj">
+                            <font key="font" metaFont="system" size="32"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-57-w3e">
+                        <rect key="frame" x="18" y="175" width="395" height="38"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" title="The app lives in your system menu. Click right mouse button to play/pause and left button to switch sounds." id="Hbi-EZ-tb3">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-U9-MhM">
+                        <rect key="frame" x="18" y="140" width="395" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" title="If you have any feedback, please let me know." allowsEditingTextAttributes="YES" id="9Va-BC-Gjx">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5L-Gh-Qt9">
+                        <rect key="frame" x="18" y="93.5" width="205" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Show this window at launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="AdP-EH-T92">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system" size="14"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onShowAtLaunchToggle:" target="Voe-Tx-rLC" id="unS-VB-7Ji"/>
+                        </connections>
+                    </button>
+                </subviews>
             </view>
-            <point key="canvasLocation" x="200" y="400"/>
+            <point key="canvasLocation" x="356" y="395"/>
         </window>
+        <menu id="Ni4-Bb-9Zz">
+            <items>
+                <menuItem title="Play" onStateImage="pause.fill" catalog="system" offStateImage="play.fill" id="Oqp-6k-klJ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="handleTogglePlay:" target="Voe-Tx-rLC" id="zKE-5p-igV"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="29E-WJ-liq"/>
+                <menuItem title="Rain" id="WvT-tY-Uyn">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="switchToRain:" target="Voe-Tx-rLC" id="dRt-w1-tek"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Ocean" onStateImage="checkmark" catalog="system" id="7f6-oe-Ih4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="switchToOcean:" target="Voe-Tx-rLC" id="P6x-fd-y2x"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Forest" onStateImage="checkmark" catalog="system" id="tI4-yP-cue">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="switchToForest:" target="Voe-Tx-rLC" id="mhk-q8-Y3H"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="bE2-0u-Cpk"/>
+                <menuItem title="Launch at login" onStateImage="checkmark" catalog="system" id="ROs-rJ-37D">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleLaunchAtLogin:" target="Voe-Tx-rLC" id="QBL-qe-bJd"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Show launch window" id="Rrl-hT-plI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showLaunchWindow:" target="Voe-Tx-rLC" id="EX3-wk-OUQ"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="3v7-VD-FE2"/>
+                <menuItem title="Quit" id="92R-Y2-SXf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="Voe-Tx-rLC" id="lZp-aQ-wES"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="911" y="318"/>
+        </menu>
     </objects>
+    <resources>
+        <image name="Logo" width="256" height="224"/>
+        <image name="Screenshot" width="350" height="350"/>
+        <image name="checkmark" catalog="system" width="14" height="13"/>
+        <image name="pause.fill" catalog="system" width="11" height="13"/>
+        <image name="play.fill" catalog="system" width="12" height="13"/>
+    </resources>
 </document>
