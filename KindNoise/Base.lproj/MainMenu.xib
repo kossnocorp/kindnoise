@@ -722,7 +722,7 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-57-w3e">
                         <rect key="frame" x="18" y="175" width="395" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" selectable="YES" title="The app lives in your system menu. Click right mouse button to play/pause and left button to switch sounds." id="Hbi-EZ-tb3">
+                        <textFieldCell key="cell" selectable="YES" title="The app lives in your system menu. Click left mouse button to play/pause and right button to switch sounds." id="Hbi-EZ-tb3">
                             <font key="font" metaFont="system" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
