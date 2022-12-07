@@ -53,6 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         showAtLaunchCheckbox.state = showLaunchWindow ? .on : .off
         if (showLaunchWindow) {
             launchWindow.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
         }
         // Add feedback label
         feedbackLabel.attributedStringValue = feedbackLabelText
