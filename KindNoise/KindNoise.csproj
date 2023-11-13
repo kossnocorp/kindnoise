@@ -11,9 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="H.NotifyIcon" Version="2.0.68" />
-    <PackageReference Include="H.NotifyIcon.WinUI" Version="2.0.68" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.5" />
+    <PackageReference Include="H.NotifyIcon" Version="2.0.118" />
+    <PackageReference Include="H.NotifyIcon.WinUI" Version="2.0.118" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.1" />
     <PackageReference Include="NAudio" Version="2.1.0" />
     <PackageReference Include="NAudio.Vorbis" Version="1.5.0" />
