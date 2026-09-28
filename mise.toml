@@ -1,0 +1,14 @@
+[tools]
+
+# Stack ########################################################################
+
+# Node.js
+node = "lts"
+pnpm = "latest"
+
+# Settings #####################################################################
+
+[settings]
+cargo.binstall = true
+lockfile = true
+idiomatic_version_file_enable_tools = ["rust"] # Use rust-toolchain.toml
