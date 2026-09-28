@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="512" height="448" viewBox="0 0 135.47 118.53">
+  <defs>
+    <linearGradient xlink:href="#a" id="d" x1="-233.69" x2="-233.69" y1="224.58" y2="106.09" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#e81242"/>
+      <stop offset="1" stop-color="#e52f73"/>
+    </linearGradient>
+    <linearGradient xlink:href="#b" id="e" x1="-170.09" x2="-170.09" y1="225.15" y2="106.09" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="b">
+      <stop offset="0" stop-color="#b11652"/>
+      <stop offset="1" stop-color="#f7448b"/>
+    </linearGradient>
+    <linearGradient xlink:href="#c" id="f" x1="-195" x2="-195" y1="111.86" y2="61.74" gradientTransform="translate(287.21 60.87)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="c">
+      <stop offset="0" stop-color="#f694a4"/>
+      <stop offset="1" stop-color="#fdcedc"/>
+    </linearGradient>
+    <filter id="g" width="1.25" height="1.21" x="-.11" y="-.09" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#931426" flood-opacity=".73" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+      <feGaussianBlur in="composite1" result="blur" stdDeviation="2"/>
+      <feOffset dx="1" dy="1" result="offset"/>
+      <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+    </filter>
+  </defs>
+  <path fill="url(#d)" d="M-233.7 106.09a35.93 35.93 0 0 0-25.4 61.33l6.4 6.4 50.8 50.8 50.8-50.8 6.41-6.4a35.9 35.9 0 0 0-25.4-61.33 35.9 35.9 0 0 0-25.4 10.53l-6.4 6.4-6.4-6.4a35.9 35.9 0 0 0-25.4-10.53z" transform="translate(269.63 -106.09)"/>
+  <path fill="url(#e)" d="m-151.1 173.82 6.41-6.4a35.9 35.9 0 0 0-25.4-61.33 35.9 35.9 0 0 0-25.4 10.53l-6.4 6.4v101.6z" transform="translate(269.63 -106.09)"/>
+  <path fill="url(#f)" d="M97.79 123.2a6.24 6.24 0 0 0-5.58-.59c-1.84.7-3 2.2-3 3.85v42.43c0 1.64 1.17 3.14 3 3.84 1.83.7 4 .48 5.58-.58l31.38-21.21c1.2-.81 1.88-2 1.88-3.27 0-1.26-.69-2.45-1.88-3.26z" filter="url(#g)" transform="translate(-36.54 -93.67)"/>
+</svg>

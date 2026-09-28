@@ -1,0 +1,41 @@
+---
+export interface Props {
+  size?: "large" | "medium" | "small";
+}
+
+const { size } = Astro.props;
+
+let sizeClasses
+
+if (size === 'large') {
+  sizeClasses = {
+    space: 'space-x-4',
+    logo: 'w-12',
+    text: 'text-4xl'
+  }
+} else if (size === 'small') {
+  sizeClasses = {
+    space: 'space-x-2',
+    logo: 'w-6',
+    text: 'text-xl'
+  }
+} else {
+  sizeClasses = {
+    space: 'space-x-3',
+    logo: 'w-8',
+    text: 'text-2xl'
+  }
+}
+---
+
+<a href="/">
+  <div
+    class:list={[
+      "flex items-center space-x-4",
+      sizeClasses.space
+    ]}
+  >
+    <img src="/logo.svg" class={sizeClasses.logo} />
+    <p class:list={["font-bold", sizeClasses.text]}>Kind Noise</p>
+  </div>
+</a>
